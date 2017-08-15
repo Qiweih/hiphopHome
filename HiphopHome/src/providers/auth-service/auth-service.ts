@@ -26,8 +26,20 @@ export class AuthServiceProvider {
     return this.afAuth.auth.signInWithEmailAndPassword(email,password);
   }
 
+  registerInWithEmail(email:string , password:string): firebase.Promise<any>{
+    return this.afAuth.auth.createUserWithEmailAndPassword(email,password);
+  }
+
+  resetPassword(email: string): firebase.Promise<any> {
+    return this.afAuth.auth.sendPasswordResetEmail(email);
+  }
+
   signInWithFacebook(): firebase.Promise<any> {
     return this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider());
+  }
+
+  signInWithGoogle(): firebase.Promise<any> {
+    return this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
   }
 
   signOut(): void {

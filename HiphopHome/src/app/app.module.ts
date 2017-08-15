@@ -9,6 +9,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,6 +21,7 @@ import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 import { HttpModule } from '@angular/http';
 import { FirebaseProvider } from './../providers/firebase/firebase';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
+import { PopupProvider } from '../providers/popup/popup';
 
 
 // AF2 Settings
@@ -38,7 +40,8 @@ export const firebaseConfig = {
     ContactPage,
     HomePage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
@@ -55,14 +58,16 @@ export const firebaseConfig = {
     ContactPage,
     HomePage,
     TabsPage,
-    LoginPage 
+    LoginPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     FirebaseProvider,
-    AuthServiceProvider
+    AuthServiceProvider,
+    PopupProvider
   ]
 })
 export class AppModule {}

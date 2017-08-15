@@ -85,4 +85,8 @@
     <plugin name="cordova-plugin-splashscreen" spec="~4.0.1" />
     <plugin name="com.hutchind.cordova.plugins.streamingmedia" spec="~0.1.4" />
     <plugin name="cordova-plugin-firebase" spec="^0.1.23" />
+    <plugin name="cordova-plugin-facebook4" spec="^1.9.1">
+        <variable name="APP_ID" value="699483356907494" />
+        <variable name="APP_NAME" value="HiphopHome" />
+    </plugin>
 </widget>

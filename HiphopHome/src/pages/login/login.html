@@ -6,8 +6,12 @@
 
 <ion-content padding>
     <form>
-        <ion-input type="text" name="email" [(ngModel)]="email" placeholder="email"></ion-input>
-        <ion-input type="text" name="password" [(ngModel)]="password" placeholder="password"></ion-input>
-        <button ion-button rounded block (click)="login()">Login </button>
+        <ion-input type="email" name="email" [(ngModel)]="email" placeholder="email"></ion-input>
+        <ion-input type="password" name="password" [(ngModel)]="password" placeholder="password"></ion-input>
+        <button ion-button rounded block (click)="loginEmail()">Login </button>
+        <button ion-button block clear (click)="goToResetPassword()"> I forgot my password</button>
+        <button ion-button block clear (click)="gotToRegister()"> Register with email</button>
+        <button ion-button rounded block (click)="loginFacebook()">Login With Facebook</button>
+        <button ion-button rounded block (click)="loginGoogle()">Login With Google</button>
     </form>
 </ion-content>
